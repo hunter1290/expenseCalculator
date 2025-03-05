@@ -63,8 +63,9 @@ function ExpenseForm({ onAdd }) {
                 },
             });
 
-            onAdd(res.data); // Update UI with new expense
+             // onAdd(res.data); // Update UI with new expense
             setExpense({ amount: "", category: "", date: "", description: "" }); // Reset form fields
+            window.location.reload();
         } catch (error) {
             console.error("Error adding expense", error);
             alert("Failed to add expense. Please try again.");
