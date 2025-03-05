@@ -12,9 +12,19 @@ const Container = styled.div`
     background: #fff;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 `;
 
 const Header = styled.div`
+   width: 100%;
+   min-height: 50vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 25%;
     display: flex;
     justify-content: space-between;
     align-items: center;
