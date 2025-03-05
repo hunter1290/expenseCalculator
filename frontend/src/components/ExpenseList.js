@@ -4,6 +4,8 @@ import axios from "axios";
 
 const Container = styled.div`
     max-width: 600px;
+    max-height: 55vh;
+    
     margin: 20px auto;
     padding: 20px;
     background: #fff;
@@ -25,6 +27,8 @@ const Input = styled.input`
 `;
 
 const List = styled.ul`
+     max-height: 20vh;
+     overflow-y: scroll;
     list-style: none;
     padding: 0;
 `;
@@ -86,7 +90,7 @@ function ExpenseList() {
                     expenses.map((exp) => (
                         <ListItem key={exp._id}>
                             <span>{exp.category} - {new Date(exp.date).toLocaleDateString()}</span>
-                            <Amount>${exp.amount}</Amount>
+                            <Amount>₹{exp.amount}</Amount>
                         </ListItem>
                     ))
                 ) : (
